@@ -1,0 +1,35 @@
+cabal-version:      1.24
+name:               haskell
+version:            0.1.0.0
+synopsis:           myhaskell
+-- description:
+homepage:           optional
+license:            GPL
+license-file:       LICENSE
+author:             kensukeken
+maintainer:         hiaxsaleh@gmail.com
+-- copyright:
+category:           Development
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+
+library
+  other-modules:       SomeOtherModule, cale, Mylib
+    -- other-modules:
+    -- other-extensions:
+    build-depends:    base >=4.17 && <4.18
+    hs-source-dirs:   src
+    default-language: Haskell2010
+    exposed-modules:     SomeExposedModule
+
+test-suite haskell-test
+    default-language: Haskell2010
+    -- other-modules:
+    -- other-extensions:
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Main.hs
+    build-depends:
+        base >=4.17 && <4.18,
+        haskell
